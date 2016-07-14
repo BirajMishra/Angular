@@ -13,11 +13,14 @@
     "rootDir": ".",
     "sourceMap": true,
     "target": "es5",
-    "inlineSources": true
+    "inlineSources": true,
+    "removeComments": true,
+    "noLib": false
   },
 
   "files": [
     "main.ts",
-    "typings.d.ts"
+    "typings.d.ts",
+    "app/courses.component.ts"
   ]
 }
