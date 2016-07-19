@@ -1,0 +1,24 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+  <div class="form-group">
+    <label for="firstName"> FirstName</label>
+    <input id="firstName" ngControl="firstName"  #firstName="ngForm" type="text" class="form-control" required minlength="3">
+  </div>
+  <div *ngIf="firstName.touched && firstName.errors">
+      <div class="alert alert-danger"  *ngIf="firstName.errors.required">
+        First Name is required.
+      </div>
+      <div class="alert alert-danger" *ngIf="firstName.errors.minlength">
+        First Name should have minimum {{firstName.errors. minlength.requiredLength}} characters.
+      </div>
+ </div>
+  <div class="form-group">
+    <label for="comment"> Comment</label>
+    <textarea id="comment" ngControl="comment" #comment="ngForm" cols="30" rows="10" class="form-control" required></textarea>
+  </div>
+  <div class="alert alert-danger" *ngIf="comment.touched && !comment.valid">
+    Comment is required.
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid"> Submit</button>
+
+</form>

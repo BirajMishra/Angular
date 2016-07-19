@@ -6,7 +6,7 @@ import { CourseService } from './courses.service'
   template:`<h1>Courses</h1>
             <h2>{{courseTitle}}</h2>
             <ul>
-            <li *ngFor='#course of courses'>
+            <li *ngFor='let course of courses'>
             {{ course }}
             </li>
             </ul>
@@ -14,7 +14,7 @@ import { CourseService } from './courses.service'
   providers:[CourseService]
 })
 export class CoursesComponent{
-    courseTitle='These course are good for us, we can learn and make money';
+    courseTitle='this course is good for us, we can learn and make money';
     courses;
 
     constructor(courseService : CourseService){

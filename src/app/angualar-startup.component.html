@@ -2,3 +2,12 @@
   {{title}}
 </h1>
 <courses></courses>
+<vote></vote>
+<author></author>
+<book></book>
+<like [isLike]="tweets.isLike" [numberOfLikes]="tweets.numberOfLikes"></like>
+<i class="glyphicon glyphicon-star"></i>
+<Favourite [isFavourite]='post.isFavourite' (change)= 'onChangeFav($event);'></Favourite>
+<input type='text' [(ngModel)]='title'>
+<input type='button' (click)="clear();">
+Preview: {{title}}

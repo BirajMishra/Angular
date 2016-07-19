@@ -1,26 +1,20 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "mapRoot": "",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
-    "outDir": "../dist/",
-    "rootDir": ".",
-    "sourceMap": true,
-    "target": "es5",
-    "inlineSources": true,
-    "removeComments": true,
-    "noLib": false
-  },
-
-  "files": [
-    "main.ts",
-    "typings.d.ts",
-    "app/courses.component.ts"
-  ]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "outDir": "../dist/",
+        "rootDir": ".",
+        "inlineSources": true,
+        "sourceMap": true
+    },
+    "fileGlobs": [
+        "./src/**/*.ts"
+    ]
 }
